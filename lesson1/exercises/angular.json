@@ -116,5 +116,8 @@
         }
       }
     }},
-  "defaultProject": "exercises"
+  "defaultProject": "exercises",
+  "cli": {
+    "analytics": false
+  }
 }

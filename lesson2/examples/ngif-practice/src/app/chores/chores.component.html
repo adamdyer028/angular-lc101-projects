@@ -3,6 +3,9 @@
     <ul>
         <li *ngFor = 'let chore of chores'>{{chore}}</li>
     </ul>
+    <div *ngIf = "chores.length > finishedChores.length">
+        <p style="color: #56d623;">Work Harder!</p>
+    </div>
 </div>
 <hr>
 <div class="doneChores">
@@ -10,5 +13,12 @@
     <ul>
         <li *ngFor = 'let done of finishedChores'>{{done}}</li>
     </ul>
+    <div *ngIf = "chores.length < 1 || finishedChores.length > chores.length + 2; else noAllowance">
+        <p>I dont know where target image is but this will do</p>
+    </div>
+
+    <ng-template #noAllowance>
+        <p>No allowance yet.</p>
+     </ng-template>
 </div>
 <hr>
